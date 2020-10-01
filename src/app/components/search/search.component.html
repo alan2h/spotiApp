@@ -1,1 +1,16 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col">
+        <input #txtbuscador (keyup)="buscarCancion(txtbuscador.value)" class="form-control" />
+    </div>
+</div>
+<div class="card-group" *ngFor="let item of canciones">
+    
+    <div  class="card">
+      <img src="{{ item.images[0].url }}" width="200" height="600" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        
+      </div>
+    </div>
+    
+  </div>

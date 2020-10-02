@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.spotify.getNewReleases()
       .subscribe(data => {
-        this.canciones = data['albums'].items
+        this.canciones = data
       }) ;
   }
 
@@ -26,9 +26,8 @@ export class SearchComponent implements OnInit {
     console.log(txtbuscador);
     this.spotify.searchRelease(txtbuscador)
     .subscribe(data => {
-      console.log(data)
-      if (data.artists){
-        this.canciones = data.artists.items;
+      if (data){
+        this.canciones = data;
        }
     })
   }

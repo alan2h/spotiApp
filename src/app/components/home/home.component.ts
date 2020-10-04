@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
      .subscribe(data => {
        if (data){
         this.albums = data;
+        console.log(this.albums);
        }
-      
      })
   }
 

@@ -3,8 +3,9 @@
         <input #txtbuscador (keyup)="buscarCancion(txtbuscador.value)" class="form-control" />
     </div>
 </div>
+  <app-loading *ngIf="!canciones"></app-loading>
 <div class="card-group" *ngFor="let item of canciones">
-    
+  
     <app-tarjetas [item]="item"></app-tarjetas>
     
     

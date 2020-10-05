@@ -1,5 +1,7 @@
+ <br>
+    
+    <app-loading *ngIf="loading"></app-loading>
 <div class="card-group" *ngFor="let item of albums">
-    
+   
     <app-tarjetas [item]="item"></app-tarjetas>
-    
-  </div>
+</div>
